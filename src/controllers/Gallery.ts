@@ -1,9 +1,8 @@
 import { Get, Controller, Render, Post, Middleware } from "routing-controllers";
 
-@Controller("/partners")
-export class PartnersController {
+@Controller("/gallery")
+export class GalleryController {
 	@Get("/")
-	@Render("partners")
+	@Render("gallery")
 	read() {}
 }
-

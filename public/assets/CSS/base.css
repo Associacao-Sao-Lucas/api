@@ -1,0 +1,25 @@
+:root {
+    
+    --header-border-mobile: #060707;
+    --main-collor: #00a859;
+    --transition-collor: #337ab7;
+    --border-bottom-collor: #2a95be;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.container {
+    padding-right: 6%;
+    padding-left: 6%;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
+}
