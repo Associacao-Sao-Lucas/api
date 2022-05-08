@@ -8,7 +8,7 @@
     "build": "rm -rf ./dist && tsc",
     "dev": "tsnd --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "test": "jest",
-    "start": "node dist/server.js"
+    "start": "node dist/api/server.js"
   },
   "dependencies": {
     "class-transformer": "^0.5.1",
