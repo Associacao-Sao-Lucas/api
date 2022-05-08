@@ -1,9 +1,9 @@
-import { CreatePartner } from '../../../src/logic/services/CreatePartner';
+import { PartnerService } from '../../../src/logic/services/PartnerService';
 import { MockRepository } from '../../mocks/MockRepository';
 
-describe('Create Partner', () => {
+describe('PartnerService', () => {
   const repository = new MockRepository<any>();
-  const createPartner = new CreatePartner(repository);
+  const partnerService = new PartnerService(repository);
 
   it('should create a new Partner in the repository', async () => { 
     const partner = {
@@ -12,8 +12,10 @@ describe('Create Partner', () => {
       url:  'http://www.josecarvalho.com',
     }
 
-    await createPartner.execute(partner)
+    await partnerService.create(partner)
 
     expect(repository.create).toHaveBeenCalledWith(partner);
   })
+
+  
 })
