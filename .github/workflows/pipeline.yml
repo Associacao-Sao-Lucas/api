@@ -6,31 +6,31 @@ on:
       - main
 
 jobs:
-  # test:
-  #   runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
     
-  #   strategy:
-  #     matrix:
-  #       node-version: [12.x]
+    strategy:
+      matrix:
+        node-version: [12.x]
 
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-  #     - name: Setup node
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: ${{ matrix.node-version }}
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-  #     - name: Install dependencies
-  #       run: npm install -g yarn && yarn  
+      - name: Install dependencies
+        run: npm install -g yarn && yarn  
 
-  #     - name: Run tests
-  #       run: yarn test
+      - name: Run tests
+        run: yarn test
 
   deploy:
-    # needs:
-    #   - test
+    needs:
+      - test
     
     runs-on: ubuntu-latest
     
@@ -44,4 +44,4 @@ jobs:
           heroku_app_name: "sao-lucas-api"
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_email: "pereira7346@gmail.com"
-                    # healthcheck: "https://[YOUR APP's NAME].herokuapp.com/health"
+          healthcheck: "https://sao-lucas-api.herokuapp.com/health"
