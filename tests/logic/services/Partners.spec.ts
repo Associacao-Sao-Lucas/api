@@ -5,41 +5,52 @@ describe('PartnersService', () => {
   const repository = new MockRepository<any>();
   const partnersService = new PartnersService(repository);
   
+  const partner = {
+    id: "12345",
+    name: 'José Carvalho',
+    logo: 'logo-url',
+    url:  'http://www.josecarvalho.com',
+  }
+
   it('should create a new Partner in the repository', async () => { 
-    const partner = {
+    const new_partner = {
       name: 'José Carvalho',
       logo: 'logo-url',
       url:  'http://www.josecarvalho.com',
     }
 
-    await partnersService.create(partner)
+    const partner_id = await partnersService.create(new_partner)
 
-    expect(repository.create).toHaveBeenCalledWith(partner);
+    expect(typeof partner_id).toBe("string");
+    expect(repository.create).toHaveBeenCalledWith(new_partner);
   })
 
   it('should delete a Partner from the repository', async () => { 
-    const partner_id = "12345"
+    await partnersService.delete(partner.id)
 
-    await partnersService.delete(partner_id)
-
-    expect(repository.delete).toHaveBeenCalledWith(partner_id);
+    expect(repository.delete).toHaveBeenCalledWith(partner.id);
   })
   
   it('should update a Partner in the repository', async () => { 
-    const partner = {
-      id: "12345",
-      name: 'José Carvalho',
-      logo: 'logo-url',
-      url:  'http://www.josecarvalho.com',
-    }
+    const partner_id = await partnersService.update(partner)
 
-    const updated_partner = await partnersService.update(partner)
-
-    expect(updated_partner).toEqual(partner);
+    expect(partner_id).toEqual(partner.id);
     expect(repository.update).toHaveBeenCalledWith(partner);
   })
-})
 
-// - show = mostra 1 partner
-// - index = mostra todos os partners
-// - update = atualiza 1 partner
+  it('should show a Partner by its id', async () => { 
+    repository.show.mockResolvedValue(partner)
+    
+    const found_partner = await partnersService.show(partner.id)
+
+    expect(found_partner).toEqual(partner);
+  })
+
+  it('should show all Partners', async () => { 
+    repository.index.mockResolvedValue([partner, partner, partner])
+    
+    const all_partners = await partnersService.index()
+
+    expect(all_partners).toEqual([partner, partner, partner]);
+  })
+})
