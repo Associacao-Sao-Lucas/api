@@ -8,7 +8,7 @@ describe("Gallery", () => {
 			expected_code: 200,
 		},
 	])("should $should", async ({ expected_code }) => {
-		const { statusCode: code, body } = await request(app).get("/gallery");
+		const { statusCode: code, body } = await request(app).get("/galeria");
 
 		expect(code).toBe(expected_code);
 	});

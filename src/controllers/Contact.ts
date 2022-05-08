@@ -1,6 +1,6 @@
 import { Get, Controller, Render, Post, Middleware } from "routing-controllers";
 
-@Controller("/contact")
+@Controller("/contato")
 export class ContactController {
 	@Get("/")
 	@Render("contact")

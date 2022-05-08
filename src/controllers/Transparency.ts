@@ -1,6 +1,6 @@
 import { Get, Controller, Render, Post, Middleware } from "routing-controllers";
 
-@Controller("/transparency")
+@Controller("/transparencia")
 export class TransparencyController {
 	@Get("/")
 	@Render("transparency")

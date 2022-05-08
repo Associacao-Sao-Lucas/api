@@ -1,6 +1,6 @@
 import { Get, Controller, Render, Post, Middleware } from "routing-controllers";
 
-@Controller("/gallery")
+@Controller("/galeria")
 export class GalleryController {
 	@Get("/")
 	@Render("gallery")
