@@ -1,7 +1,8 @@
-import { ContactController, HealthController, HomeController, PartnersController, StaffController, TransparencyController, DonationsController, GalleryController } from "./controllers";
+import { ContactController, HealthController, HomeController, PartnersController, StaffController, TransparencyController, DonationsController, GalleryController, ActivitiesController } from "./controllers";
 
 import { useExpressServer } from "routing-controllers";
 import express from "express";
+
 
 const app = express()
 app.set('view engine', 'pug')
@@ -18,6 +19,7 @@ export default useExpressServer(app, {
 		TransparencyController,
 		DonationsController,
 		GalleryController,
+		ActivitiesController
 	],
 	validation: true,
 	classTransformer: true,
