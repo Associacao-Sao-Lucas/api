@@ -1,8 +1,11 @@
-import { ContactController, HealthController, HomeController, PartnersController, StaffController, TransparencyController, DonationsController, GalleryController, ActivitiesController } from "./controllers";
+import { ContactController, HealthController, HomeController, PartnersController, StaffController, TransparencyController, DonationsController, GalleryController, ActivitiesController, AdminStaffController } from "./controllers";
 
 import { useExpressServer } from "routing-controllers";
 import express from "express";
+import multer from "multer"
+import 'reflect-metadata'
 
+multer()
 
 const app = express()
 app.set('view engine', 'pug')
@@ -19,7 +22,8 @@ export default useExpressServer(app, {
 		TransparencyController,
 		DonationsController,
 		GalleryController,
-		ActivitiesController
+		ActivitiesController,
+		AdminStaffController
 	],
 	validation: true,
 	classTransformer: true,
