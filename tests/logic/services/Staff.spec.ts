@@ -1,9 +1,11 @@
 import { StaffService } from '../../../src/logic/services/Staff';
+import { MockFileStorage } from '../../mocks/MockFileStorage';
 import { MockRepository } from '../../mocks/MockRepository';
 
 describe('StaffService', () => {
+    const file_storage = new MockFileStorage();
     const repository = new MockRepository<any>();
-    const staffService = new StaffService(repository);
+    const staffService = new StaffService(file_storage, repository);
 
     const staff_member = {
         id: '010101',
@@ -12,19 +14,25 @@ describe('StaffService', () => {
         resume: 'curriculum.pdf'
     }
 
-    it('should create a new StaffMember in the repository', async () => {
-        const new_staff_member = {
-            id: '010101',
+    it('should create a new StaffMember', async () => {
+        const staff_member = {
             name: 'Rafael Silva',
             job: 'Engineer',
-            resume: 'curriculum.pdf'
         }
 
-        const staff_member_id = await staffService.create(new_staff_member)
+        const resume = {
+            originalname: "curriculum.pdf",
+            mimetype: "application/pdf",
+            buffer: Buffer.from("Some PDF content")
+        }
 
-        expect(typeof staff_member_id).toBe("string");
-        expect(repository.create).toHaveBeenCalledWith(new_staff_member);
+        const new_staff_member = await staffService.create(
+            staff_member,
+            resume
+        )
 
+        expect(typeof new_staff_member.id).toBe("string");
+        expect(new_staff_member.resume).toBe("mock-file");
     })
 
     it('Should delete a StaffMember from the repository', async() => {
