@@ -1,9 +1,11 @@
 import { PartnersService } from '../../../src/logic/services/Partners';
+import { MockFileStorage } from '../../mocks/MockFileStorage';
 import { MockRepository } from '../../mocks/MockRepository';
 
 describe('PartnersService', () => {
+  const file_storage = new MockFileStorage();
   const repository = new MockRepository<any>();
-  const partnersService = new PartnersService(repository);
+  const partnersService = new PartnersService(file_storage, repository);
   
   const partner = {
     id: "12345",
@@ -12,17 +14,22 @@ describe('PartnersService', () => {
     url:  'http://www.josecarvalho.com',
   }
 
-  it('should create a new Partner in the repository', async () => { 
-    const new_partner = {
+  it('should create a new Partner', async () => { 
+    const partner = {
       name: 'José Carvalho',
-      logo: 'logo-url',
       url:  'http://www.josecarvalho.com',
     }
 
-    const partner_id = await partnersService.create(new_partner)
+    const logo = {
+      originalname: "logo.png",
+      mimetype: "application/png",
+      buffer: Buffer.from("Awesome logo")
+    }
 
-    expect(typeof partner_id).toBe("string");
-    expect(repository.create).toHaveBeenCalledWith(new_partner);
+    const new_partner = await partnersService.create(partner, logo)
+
+    expect(typeof new_partner.id).toBe("string");
+    expect(new_partner.logo).toBe("mock-file");
   })
 
   it('should delete a Partner from the repository', async () => { 
