@@ -8,10 +8,9 @@ import {
 	Redirect,
 	Param,
 } from "routing-controllers";
-import { serialize } from "v8";
+
 import { DiskFileStorage } from "../../logic/providers";
 import { MemoryRepository } from "../../logic/repositories";
-
 import { StaffService } from "../../logic/services/Staff";
 
 @Controller("/colaboradores")
@@ -48,16 +47,23 @@ export class StaffController {
 	}
 
 	@Get("/editar/:id")
-	@Render("/staff/edit")
+	@Render("staff/edit")
 	async edit_form(@Param("id") id: string) {
 		const staffMember = await this.service.show(id);
 		return { staffMember };
 	}
 
-	@Post("/editar")
-	@Redirect("/")
+	@Post("/editar/:id")
+	@Redirect("/admin/colaboradores")
 	async edit(
+		@Param("id") id: string,
 		@Body() body: any,
 		@UploadedFile("resume") file: Express.Multer.File
-	) {}
+	) {
+		await this.service.update({
+			id: id,
+			name: body.name,
+			job: body.job,
+		});
+	}
 }

@@ -10,17 +10,19 @@ block main
     p Preencha os campos abaixo para editar um colaborador:
 
     form(
-      action="colaboradores/editar/" + #{staffMember.id} 
+      action="/admin/colaboradores/editar/" + staffMember.id 
       method="post" 
       enctype="multipart/form-data"
     )
       label(for="name") Nome
-      input(type="text" name="name" value="#{staffMember.name}")
+      input(type="text" name="name" value=staffMember.name)
 
       label(for="job") Cargo
-      input(type="text" name="job", value="#{staffMember.job}")
+      input(type="text" name="job", value=staffMember.job)
       
       label(for="resume") Currículo
       input(type="file" name="resume")
+
+      p Caso um novo curriculo não seja enviado, o atual será mantido.
 
       input(type="submit" value="Enviar")
