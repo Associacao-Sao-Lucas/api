@@ -1,4 +1,4 @@
-extends ../../templates/layout
+extends ../templates/layout
 
 block title
   title Editar Colaborador
@@ -10,15 +10,15 @@ block main
     p Preencha os campos abaixo para editar um colaborador:
 
     form(
-      action="colaboradores/" + #{staff_member_id} + "/editar" 
+      action="colaboradores/editar/" + #{staffMember.id} 
       method="post" 
       enctype="multipart/form-data"
     )
       label(for="name") Nome
-      input(type="text" name="name")
+      input(type="text" name="name" value="#{staffMember.name}")
 
       label(for="job") Cargo
-      input(type="text" name="job")
+      input(type="text" name="job", value="#{staffMember.job}")
       
       label(for="resume") Currículo
       input(type="file" name="resume")

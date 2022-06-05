@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "dev": "tsnd --inspect --transpile-only --ignore-watch node_modules src/api/server.ts",
+    "dev": "tsnd --inspect --transpile-only --ignore-watch node_modules src/admin/server.ts",
     "test": "jest",
     "start": "node dist/api/server.js"
   },

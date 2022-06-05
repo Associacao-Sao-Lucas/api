@@ -1,4 +1,4 @@
-extends templates/layout
+extends ../templates/layout
 
 block title
   title Colaboradores - São Lucas
@@ -14,5 +14,5 @@ block main
         li #{member.job}
         li #{member.resume}
 
-        a(href='/' + member.id + '/editar') Editar
-        a(href='/' + member.id + '/remover') Excluir
+        a(href='/editar/' + member.id) Editar
+        a(href='/excluir/' + member.id) Excluir

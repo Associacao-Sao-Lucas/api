@@ -6,6 +6,7 @@ import {
 	UploadedFile,
 	Body,
 	Redirect,
+	Param,
 } from "routing-controllers";
 import { serialize } from "v8";
 import { DiskFileStorage } from "../../logic/providers";
@@ -20,6 +21,13 @@ export class StaffController {
 		new MemoryRepository()
 	);
 
+	@Get("/")
+	@Render("staff/index")
+	async index() {
+		const staff = await this.service.index();
+		return { staff };
+	}
+
 	@Get("/criar")
 	@Render("staff/create")
 	create_form() {}
@@ -30,23 +38,26 @@ export class StaffController {
 		@Body() body: any,
 		@UploadedFile("resume") file: Express.Multer.File
 	) {
-		try {
-			await this.service.create(
-				{
-					name: body.name,
-					job: body.job,
-				},
-				file
-			);
-		} catch (err) {
-			console.log(err);
-		}
+		await this.service.create(
+			{
+				name: body.name,
+				job: body.job,
+			},
+			file
+		);
 	}
 
-	@Get("/editar")
+	@Get("/editar/:id")
 	@Render("/staff/edit")
-	edit_form() {}
+	async edit_form(@Param("id") id: string) {
+		const staffMember = await this.service.show(id);
+		return { staffMember };
+	}
 
-	// @Post("/editar")
-	// @Redirect("/")
+	@Post("/editar")
+	@Redirect("/")
+	async edit(
+		@Body() body: any,
+		@UploadedFile("resume") file: Express.Multer.File
+	) {}
 }
