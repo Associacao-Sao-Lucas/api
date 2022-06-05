@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [17.x]
@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm install -g yarn && yarn  
+        run: npm install -g yarn && yarn
 
       - name: Run tests
         run: yarn test
@@ -31,15 +31,15 @@ jobs:
   deploy:
     needs:
       - test
-    
+
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: Deploy
-        uses: akhileshns/heroku-deploy@v3.12.12 
+        uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_app_name: "sao-lucas-api"
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}

@@ -7,35 +7,35 @@ export class PartnersService {
     private readonly fileStorage: FileStorage,
     private readonly repository: Repository<Partner>
   ) {}
-  
+
   async create(
     partner: Omit<Partner, "id" | "logo">,
     logo: InFile
-    ): Promise<Partner> { 
+  ): Promise<Partner> {
     const stored_logo = await this.fileStorage.store(logo);
 
     const new_partner = {
-        ...partner,
-        logo: stored_logo.id
+      ...partner,
+      logo: stored_logo.id,
     };
 
     return await this.repository.create(new_partner);
   }
 
-  async delete(partner_id: string): Promise<void> { 
+  async delete(partner_id: string): Promise<void> {
     return await this.repository.delete(partner_id);
   }
 
-  async update(partner: Partner): Promise<string> { 
+  async update(partner: Partner): Promise<string> {
     const updated_partner = await this.repository.update(partner);
     return updated_partner.id;
   }
 
-  async show(partner_id: string): Promise<Partner> { 
+  async show(partner_id: string): Promise<Partner> {
     return await this.repository.show(partner_id);
   }
 
-  async index(): Promise<Partner[]> { 
+  async index(): Promise<Partner[]> {
     return await this.repository.index();
   }
 }

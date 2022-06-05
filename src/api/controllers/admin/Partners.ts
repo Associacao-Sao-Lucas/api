@@ -5,10 +5,9 @@
 // 	@Get("/")
 // 	@Render("create-partner-form")
 //   read() { }
-  
+
 //   @Post("/")
 //   @Middleware(["admin"])
 //   @Redirect("/admin/partners")
 //   create() {}
 // }
-

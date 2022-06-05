@@ -1,0 +1,26 @@
+extends ../../templates/layout
+
+block title
+  title Editar Colaborador
+
+block main
+  section.staff-container 
+    h1 Editar colaborador
+
+    p Preencha os campos abaixo para editar um colaborador:
+
+    form(
+      action="colaboradores/" + #{staff_member_id} + "/editar" 
+      method="post" 
+      enctype="multipart/form-data"
+    )
+      label(for="name") Nome
+      input(type="text" name="name")
+
+      label(for="job") Cargo
+      input(type="text" name="job")
+      
+      label(for="resume") Currículo
+      input(type="file" name="resume")
+
+      input(type="submit" value="Enviar")

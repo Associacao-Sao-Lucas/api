@@ -2,14 +2,14 @@ import request from "supertest";
 import app from "../../../src/api/app";
 
 describe("Donations", () => {
-	it.each([
-		{
-			should: "return the donations page of the web site",
-			expected_code: 200,
-		},
-	])("should $should", async ({ expected_code }) => {
-		const { statusCode: code, body } = await request(app).get("/doacoes");
+  it.each([
+    {
+      should: "return the donations page of the web site",
+      expected_code: 200,
+    },
+  ])("should $should", async ({ expected_code }) => {
+    const { statusCode: code, body } = await request(app).get("/doacoes");
 
-		expect(code).toBe(expected_code);
-	});
+    expect(code).toBe(expected_code);
+  });
 });

@@ -1,2 +1,2 @@
-export * from './Partner'
-export * from './StaffMember'
+export * from "./Partner";
+export * from "./StaffMember";

@@ -7,4 +7,4 @@ export * from "./Transparency";
 export * from "./Donations";
 export * from "./Gallery";
 export * from "./Activities";
-export * from './admin/Staff'
+export * from "./admin/Staff";

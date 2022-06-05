@@ -1,0 +1,18 @@
+extends templates/layout
+
+block title
+  title Colaboradores - São Lucas
+
+block main
+  section.staff-container
+    h1 Colaboradores
+
+    ul
+      for member in staff
+        li #{member.id}
+        li #{member.name}
+        li #{member.job}
+        li #{member.resume}
+
+        a(href='/' + member.id + '/editar') Editar
+        a(href='/' + member.id + '/remover') Excluir
