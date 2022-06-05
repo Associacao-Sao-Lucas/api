@@ -1,18 +1,28 @@
-header.header.container
-      a(href='/').header__logo
-        img(src='#', alt='Logo')
+header
+      
 
-      nav.header__navigation
-        ul 
-          li.header__link
+      nav
+        
+        a(href='/').logo
+          img(src='../public/assets/img/logo.png' alt='Logo')
+        ul.nav-list
+          li
             a(href='/atividades') Atividades
-          li.header__link
+          li
             a(href='/colaboradores') Colaboradores
-          li.header__link
+          li
             a(href='/galeria') Galeria
-          li.header__link
+          li
             a(href='/transparencia') Transparência 
-          li.header__link
+          li
             a(href='/parceiros') Patrocinadores 
-          li.header__link
+          li
             a(href='/doacoes') Doações
+        nav.hamburger
+          input(type="checkbox", id="checkbox-menu")
+          label(for="checkbox-menu")
+            span
+            span 
+            span 
+            
+          
