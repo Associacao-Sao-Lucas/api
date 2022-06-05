@@ -1,21 +1,19 @@
 footer {
-    display: none;
+  display: none;
 }
 
 footer nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 5%;
-    color: white;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
+  color: white;
 }
 
-
 footer .nav-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  color: white;
 }

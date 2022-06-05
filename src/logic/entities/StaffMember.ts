@@ -3,4 +3,4 @@ export type StaffMember = {
   name: string;
   job: string;
   resume: string;
-}
+};

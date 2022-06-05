@@ -1,2 +1,2 @@
-export * from './Repository'
-export * from './MemoryRepository'
+export * from "./Repository";
+export * from "./MemoryRepository";

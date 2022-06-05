@@ -1,48 +1,42 @@
 :root {
-    
-    --header-border-mobile: #060707;
-    --main-collor: #00a859;
-    --transition-collor: #337ab7;
-    --border-bottom-collor: #2a95be;
+  --header-border-mobile: #060707;
+  --main-collor: #00a859;
+  --transition-collor: #337ab7;
+  --border-bottom-collor: #2a95be;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
 body {
-    font-family: 'europa, sans-serif';
-    
+  font-family: "europa, sans-serif";
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
-
 
 @media screen and (max-width: 1024px) {
-    body {
-        overflow-x: hidden;
-    }
+  body {
+    overflow-x: hidden;
+  }
 }
 
-
-
 @media screen and (min-width: 1024px) {
-    .container {
-        padding-left: calc((100% - 940px)/2);
-        padding-right: calc((100% - 940px)/2);
-    }
+  .container {
+    padding-left: calc((100% - 940px) / 2);
+    padding-right: calc((100% - 940px) / 2);
+  }
 }
