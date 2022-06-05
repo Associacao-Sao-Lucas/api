@@ -4,7 +4,7 @@ block title
   title Criar Colaborador
 
 block main
-  section.staff.container colaborador
+  section.staff-container colaborador
 
     p Preencha os campos abaixo para criar um novo colaborador:
 
@@ -13,6 +13,7 @@ block main
       method="post" 
       enctype="multipart/form-data"
     )
+      
       label(for="name") Nome
       input(type="text" name="name")
 
