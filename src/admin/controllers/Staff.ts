@@ -1,3 +1,5 @@
+import { StaffService, DiskFileStorage, MemoryRepository } from "../../logic";
+
 import {
 	Get,
 	Controller,
@@ -9,10 +11,6 @@ import {
 	Param,
 } from "routing-controllers";
 
-import { DiskFileStorage } from "../../logic/providers";
-import { MemoryRepository } from "../../logic/repositories";
-import { StaffService } from "../../logic/services/Staff";
-
 @Controller("/colaboradores")
 export class StaffController {
 	private service = new StaffService(
@@ -23,8 +21,7 @@ export class StaffController {
 	@Get("/")
 	@Render("staff/index")
 	async index() {
-		const staff = await this.service.index();
-		return { staff };
+		return { staff: await this.service.index() };
 	}
 
 	@Get("/criar")
@@ -32,25 +29,18 @@ export class StaffController {
 	create_form() {}
 
 	@Post("/criar")
-	@Redirect("/")
+	@Redirect("/admin/colaboradores")
 	async create(
 		@Body() body: any,
 		@UploadedFile("resume") file: Express.Multer.File
 	) {
-		await this.service.create(
-			{
-				name: body.name,
-				job: body.job,
-			},
-			file
-		);
+		await this.service.create({ name: body.name, job: body.job }, file);
 	}
 
 	@Get("/editar/:id")
 	@Render("staff/edit")
 	async edit_form(@Param("id") id: string) {
-		const staffMember = await this.service.show(id);
-		return { staffMember };
+		return { staffMember: await this.service.show(id) };
 	}
 
 	@Post("/editar/:id")
@@ -60,10 +50,6 @@ export class StaffController {
 		@Body() body: any,
 		@UploadedFile("resume") file: Express.Multer.File
 	) {
-		await this.service.update({
-			id: id,
-			name: body.name,
-			job: body.job,
-		});
+		await this.service.update({ id: id, name: body.name, job: body.job });
 	}
 }
