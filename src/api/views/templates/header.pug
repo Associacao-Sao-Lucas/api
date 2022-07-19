@@ -1,11 +1,17 @@
 header
       
 
-      nav
+      nav(id="nav")
+        
         
         a(href='/').logo
           img(src='../public/assets/img/logo.png' alt='Logo')
-        ul.nav-list
+
+        button(arial-label="Abrir Menu", id="btn-mobile", aria-haspopup="true", aria-controls="menu", aria-expanded="false") Menu
+          span(id="hamburger")
+
+        
+        ul(id="menu", role="menu")
           li
             a(href='/atividades') Atividades
           li
@@ -18,12 +24,10 @@ header
             a(href='/parceiros') Patrocinadores 
           li
             a(href='/doacoes') Doações
-        nav.hamburger
-          input(type="checkbox", id="checkbox-menu")
-          label(for="checkbox-menu")
-            span
-            span 
-            span
-
-            
+        
+        
           
+
+
+
+ 
