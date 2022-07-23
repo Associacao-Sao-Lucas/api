@@ -1,8 +1,13 @@
-import { Get, Controller, Render, Post, Middleware } from "routing-controllers";
+import { Get, Controller, Render } from "routing-controllers";
+import { Drive } from "../../logic";
 
 @Controller("/parceiros")
 export class PartnersController {
-  @Get("/")
-  @Render("partners")
-  read() {}
+	private drive = new Drive();
+
+	@Get("/")
+	@Render("partners")
+	async read() {
+		return { partners_folder: await this.drive.folder("Parceiros") };
+	}
 }
