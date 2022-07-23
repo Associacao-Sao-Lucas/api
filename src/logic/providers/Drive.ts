@@ -27,6 +27,8 @@ export class Drive {
 	}
 
 	public async folders(): Promise<Folder[]> {
+		console.log(process.env.DRIVE_CLIENT_EMAIL, process.env.DRIVE_PRIVATE_KEY);
+
 		const drive_files = await this.drive.query().run();
 
 		return drive_files
