@@ -1,7 +1,12 @@
-import { TsGoogleDrive } from "ts-google-drive";
-import { File } from "ts-google-drive/build/File";
+import "dotenv/config";
 
-const tsGoogleDrive = new TsGoogleDrive({ keyFilename: "serviceAccount.json" });
+import { TsGoogleDrive } from "ts-google-drive";
+import { File as DriveFile } from "ts-google-drive/build/File";
+
+export type File = {
+	name: string;
+	id: string;
+};
 
 export type Folder = {
 	name: string;
@@ -10,43 +15,42 @@ export type Folder = {
 };
 
 export class Drive {
-	public all_files: File[] = [];
-	public folders: Folder[] = [];
+	private drive = new TsGoogleDrive({
+		credentials: {
+			client_email: process.env.DRIVE_CLIENT_EMAIL,
+			private_key: process.env.DRIVE_PRIVATE_KEY,
+		},
+	});
 
-	public async load(): Promise<void> {
-		this.all_files = await tsGoogleDrive.query().run();
-
-		this.folders = this.all_files
-			.filter((file) => file.parents.length === 0 && file.isFolder)
-			.map((root_file) => this.into_folder(root_file));
+	public async folder(name: string): Promise<Folder | undefined> {
+		return (await this.folders()).find((folder) => folder.name === name);
 	}
 
-	public folder_files(folder_name: string): File[] {
-		const folder = this.all_files.find((file) => file.name === folder_name);
-		return this.all_files.filter((file) => file.parents[0] === folder!.id);
+	public async folders(): Promise<Folder[]> {
+		const drive_files = await this.drive.query().run();
+
+		return drive_files
+			.filter((drive_file) => this.is_root_folder(drive_file))
+			.map((drive_file) => this.create_folder(drive_file, drive_files));
 	}
 
-	private into_folder(file: File): Folder {
-		const folder = {
-			name: file.name,
-			files: [] as any[],
-			folders: [] as any[],
-		};
+	private is_root_folder(drive_file: DriveFile): boolean {
+		return drive_file.isFolder && drive_file.parents.length === 0;
+	}
 
-		this.all_files
-			.filter((child) => child.parents[0] === file.id)
+	private create_folder(from: DriveFile, other_files: DriveFile[]): Folder {
+		const folder: Folder = { name: from.name, files: [], folders: [] };
+
+		other_files
+			.filter((drive_file) => drive_file.parents.includes(from.id))
 			.forEach((child) => {
 				if (child.isFolder) {
-					folder.folders.push(this.into_folder(child));
+					folder.folders.push(this.create_folder(child, other_files));
 				} else {
-					folder.files.push({ name: child.name, url: this.url(child.id) });
+					folder.files.push({ name: child.name, id: child.id });
 				}
 			});
 
 		return folder;
-	}
-
-	private url(id: string) {
-		return `https://drive.google.com/file/d/${id}/view?usp=sharing`;
 	}
 }
