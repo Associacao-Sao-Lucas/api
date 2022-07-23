@@ -22,6 +22,15 @@ export class Drive {
 		},
 	});
 
+	public async file_content(filename: string): Promise<string> {
+		return await this.drive
+			.query()
+			.setNameEqual(filename)
+			.run()
+			.then((matched_files) => matched_files[0].download())
+			.then((file_content) => file_content.toString());
+	}
+
 	public async folder(name: string): Promise<Folder | undefined> {
 		return (await this.folders()).find((folder) => folder.name === name);
 	}

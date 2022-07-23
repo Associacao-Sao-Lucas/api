@@ -7,7 +7,12 @@ describe("Drive", () => {
 
 		expect(test_folder).toStrictEqual({
 			name: "__test__",
-			files: [],
+			files: [
+				{
+					name: "file_with_content.txt",
+					id: "1wBHW4s7unVOrPufWjrzZeGXG-BqTDLlj",
+				},
+			],
 			folders: [
 				{
 					name: "folder2",
@@ -35,5 +40,12 @@ describe("Drive", () => {
 				},
 			],
 		});
+	});
+
+	it("should load the content of the specified file", async () => {
+		const drive = new Drive();
+		const content = await drive.file_content("file_with_content.txt");
+
+		expect(content).toBe("Test File Content");
 	});
 });
