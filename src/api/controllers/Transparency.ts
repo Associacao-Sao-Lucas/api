@@ -1,4 +1,4 @@
-import { Get, Controller, Render, Post, Middleware } from "routing-controllers";
+import { Get, Controller, Render } from "routing-controllers";
 import { Drive } from "../../logic";
 
 @Controller("/transparencia")
