@@ -27,10 +27,6 @@ export class Drive {
 	}
 
 	public async folders(): Promise<Folder[]> {
-		[process.env.DRIVE_CLIENT_EMAIL, process.env.DRIVE_PRIVATE_KEY]
-			.map((value) => value?.split("").join("-"))
-			.map((v) => console.log(v));
-
 		const drive_files = await this.drive.query().run();
 
 		return drive_files
