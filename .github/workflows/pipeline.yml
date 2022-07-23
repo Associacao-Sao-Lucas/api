@@ -13,6 +13,8 @@ jobs:
       matrix:
         node-version: [17.x]
 
+    e
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -26,6 +28,9 @@ jobs:
         run: npm install -g yarn && yarn
 
       - name: Run tests
+        env:
+          DRIVE_CLIENT_EMAIL: ${{ secrets.DRIVE_CLIENT_EMAIL }}
+          DRIVE_PRIVATE_KEY: ${{ secrets.DRIVE_PRIVATE_KEY }}
         run: yarn test
 
   deploy:
@@ -42,6 +47,6 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_app_name: "sao-lucas-api"
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_email: "pereira7346@gmail.com"
           healthcheck: "https://sao-lucas-api.herokuapp.com/health"
