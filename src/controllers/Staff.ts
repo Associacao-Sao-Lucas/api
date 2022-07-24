@@ -1,10 +1,13 @@
 import { Get, Controller, Render, Post, Middleware } from "routing-controllers";
-import { Drive, Employee, Staff } from "../logic";
+import { Drive } from "../logic";
 
+export type Employee = {
+	name: string;
+	job: string;
+};
 @Controller("/colaboradores")
 export class StaffController {
 	private drive = new Drive();
-	private staff = new Staff();
 
 	@Get("/")
 	@Render("staff")
@@ -23,6 +26,15 @@ export class StaffController {
 	private async employees(filename: string): Promise<Employee[]> {
 		return this.drive
 			.file_content(filename)
-			.then((file_content) => this.staff.parse(file_content));
+			.then((file_content) => this.parse_employees(file_content));
+	}
+
+	private parse_employees(file_content: string): Employee[] {
+		const employees = file_content.split(/\n\n+/).map((e) => e.split("\n"));
+
+		return employees.map((employee) => {
+			const [name, job] = employee;
+			return { name: name.split(": ")[1], job: job.split(": ")[1] };
+		});
 	}
 }
