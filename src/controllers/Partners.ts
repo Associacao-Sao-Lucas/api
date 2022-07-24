@@ -1,5 +1,5 @@
 import { Get, Controller, Render } from "routing-controllers";
-import { Drive } from "../../logic";
+import { Drive } from "../logic";
 
 @Controller("/parceiros")
 export class PartnersController {

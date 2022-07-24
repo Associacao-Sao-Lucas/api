@@ -1,4 +1,4 @@
-import { Drive } from "../../../src/logic/providers";
+import { Drive } from "../../src/logic";
 
 describe("Drive", () => {
 	it("should load all Files and Folders within an specific Folder", async () => {

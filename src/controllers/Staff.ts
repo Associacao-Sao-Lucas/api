@@ -1,5 +1,5 @@
 import { Get, Controller, Render, Post, Middleware } from "routing-controllers";
-import { Drive, Employee, Staff } from "../../logic";
+import { Drive, Employee, Staff } from "../logic";
 
 @Controller("/colaboradores")
 export class StaffController {
