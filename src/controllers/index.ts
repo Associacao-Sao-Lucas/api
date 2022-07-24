@@ -6,4 +6,3 @@ export * from "./Contact";
 export * from "./Transparency";
 export * from "./Donations";
 export * from "./Gallery";
-export * from "./Activities";
