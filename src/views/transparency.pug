@@ -11,7 +11,7 @@ block main
         +folder(child)
 
       for child in folder.files
-        li.folder: a(href=`https://drive.google.com/file/d/${child.id}/view?usp=sharing`) #{child.name}
+        li.folder: a.link-anchor(href=`https://drive.google.com/file/d/${child.id}/view?usp=sharing`) #{child.name}
 
   div.transparency-container
     h1 Transparência
