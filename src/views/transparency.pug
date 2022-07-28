@@ -11,11 +11,11 @@ block main
         +folder(child)
 
       for child in folder.files
-        li: a(href=`https://drive.google.com/file/d/${child.id}/view?usp=sharing`) #{child.name}
+        li.folder: a(href=`https://drive.google.com/file/d/${child.id}/view?usp=sharing`) #{child.name}
 
-  section.transparencia
+  div.transparency-container
     h1 Transparência
 
-    ul
-      for folder in transparency_folder.folders
-        +folder(folder)
+    ul.folders
+      for folder in transparency_folder.folders     
+          +folder(folder)
