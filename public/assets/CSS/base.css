@@ -12,6 +12,7 @@
   padding: 0;
   list-style: none;
   box-sizing: border-box;
+  background-color: #eff3f7;
   
 }
 
@@ -20,6 +21,14 @@ body, ul {
   padding: 0px;
   font-family: "europa, sans-serif";
  
+}
+
+h1,h2 {
+  color: #333333;
+}
+
+h4 {
+  color: #444;
 }
 
 
