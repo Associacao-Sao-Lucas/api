@@ -4,31 +4,34 @@ block title
   title Colaboradores - São Lucas
 
 block main
-  section.colaboradores.container
+  
+  div.container
     h1 Colaboradores
     
     h2 São Lucas 
 
-    ul
+    ul.team
       for employee in sa_staff
-        li
-          p #{employee.name}
-          p #{employee.job}
+        li.team-member
+          h4.name-staff #{employee.name}
+          span.job-staff #{employee.job}
 
+  
     h2 Residência Terapêutica 
 
-    ul
+    ul.team
       for employee in rt_staff
-        li
-          p #{employee.name}
-          p #{employee.job}
-
+        li.team-member
+          h4.name-staff #{employee.name}
+          span.job-staff #{employee.job}
+          
+  
     h2 Equoterapia
 
-    ul
+    ul.team
       for employee in eq_staff
-        li
-          p #{employee.name}
-          p #{employee.job}
+        li.team-member
+          h4.name-staff #{employee.name}
+          span.job-staff #{employee.job}
 
 
