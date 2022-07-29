@@ -74,7 +74,7 @@ span {
     .team{
 
         grid-template-columns: 100%;
-        gap: 0.1%;
+        gap: 0%;
         margin: 12%;
         
     }
