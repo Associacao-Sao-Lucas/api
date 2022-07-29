@@ -4,10 +4,15 @@ block title
   title Parceiros - São Lucas
 
 block main
-  section.parceiros
-    for partner in partners_folder.files 
-      img(
-        src=`https://drive.google.com/uc?export=view&id=${partner.id}`
-        width="200px" 
-        height="200px"
-      )
+  
+  div.partners-container
+    h1 Parceiros
+
+    ul.partners
+      for partner in partners_folder.files 
+        li.partner  
+          img.img-partners(
+            src=`https://drive.google.com/uc?export=view&id=${partner.id}`
+            width="200px" 
+            height="200px"
+          )
