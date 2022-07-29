@@ -1,60 +1,43 @@
-main {
-    margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-h1 {
+.staff-container{
     display: flex;
-    align-items: center;
-    justify-items: center;
-}
-
-
-.container{
-    display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: flex-start;
     flex-direction: column;
+    text-align: center;
     
     
 }
 
 
 .team{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 1%;
-    padding: 2%;
+
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: space-around;
+    gap: 0.5%;
+    margin: 5.5%;
+    
+   
     
 }
 
 
 .team-member{
     display: flex;
-    /* flex-direction: column; */
-    /* remover o wrap apos testes */
-    flex-flow: column wrap;
-    justify-content: space-between;
-    width: 22%;
-    height: 75px;
-	
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15vh;	
 	text-align: center;
-	margin: 1%;
-    padding: 0.5%;
+	align-items: center;
 	transition: 0.3s;
-	box-shadow: 2px 2px 2px #CCC;
-	position: relative;
-    
+	box-shadow:  2px 2px 2px #CCC;
+	
+ 
     
 }
-
 
 .team-member:hover {
     box-shadow: 4px 4px 4px 3px var(--background-gray-collor)
 }
-
-
 
 
 span {
@@ -62,7 +45,37 @@ span {
 }
 
 
+
+
 @media (max-width: 1024px) {
 	
+    .team {
+        grid-template-columns: 33% 33% 33%;
+        gap: 0.5%;
+        margin: 9%;
+    }
 	
+}
+
+
+ @media (max-width: 930px) {
+
+    .team {
+        grid-template-columns: 50% 50%;
+        gap: 0.5%;
+        margin: 9%;
+    }
+
+}
+
+
+@media (max-width: 570px) {
+
+    .team{
+
+        grid-template-columns: 100%;
+        gap: 0.1%;
+        margin: 12%;
+        
+    }
 }
