@@ -1,4 +1,4 @@
-header nav {
+/* header nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -9,7 +9,6 @@ header nav {
 header #menu {
 	display: flex;
 	justify-content: space-between;
-	/* de nada adianta distribuir igualmente o espaço entre eles se não tem espaço! */
 	width: 70%;
 	margin-right: 5%;
 	
@@ -138,4 +137,4 @@ header #btn-mobile {
 	}
 
 	
-}
+} */
