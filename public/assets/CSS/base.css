@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --header-border-mobile: #060707;
   --main-color: #00a859;
   --transition-color: #337ab7;
@@ -39,9 +39,9 @@ h4 {
 } */
 
 
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   body {
     overflow-x: hidden;
   }
-} */
+}
 
