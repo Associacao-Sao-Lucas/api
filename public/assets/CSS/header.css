@@ -28,7 +28,7 @@ header li a:before {
 	width: 100%;
 	height: 1.4px;
 	border-radius: 4px;
-	background-color: var(--transition-collor);
+	background-color: var(--transition-color);
 	bottom: 0;
 	left: 0;
 	transform-origin: right;
@@ -110,7 +110,7 @@ header #btn-mobile {
 		border-top: 2px solid;
 	
    		width: 20px;
-		color: var(--main-collor);
+		color: var(--main-color);
 	}
 
 	header #hamburger::after, #hamburger::before {

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-li-a {
+    @apply relative font-medium text-blue-header;
+}
+

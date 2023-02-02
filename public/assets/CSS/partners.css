@@ -25,12 +25,12 @@
 
 
 .img-partners {
-    box-shadow: 1.5px 1.5px 1.5px 1.5px  var(--transition-collor);
+    box-shadow: 1.5px 1.5px 1.5px 1.5px  var(--transition-color);
     background-color:  #eee;
 }
 
 .img-partners:hover {
-    box-shadow: 4px 4px 4px 4px  var(--background-gray-collor);
+    box-shadow: 4px 4px 4px 4px  var(--background-gray-color);
     background-color:  #eee;
     
 }

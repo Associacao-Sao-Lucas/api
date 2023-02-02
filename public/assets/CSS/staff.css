@@ -36,12 +36,12 @@
 }
 
 .team-member:hover {
-    box-shadow: 4px 4px 4px 3px var(--background-gray-collor)
+    box-shadow: 4px 4px 4px 3px var(--background-gray-color)
 }
 
 
 span {
-    color: var(--main-collor);
+    color: var(--main-color);
 }
 
 
