@@ -10,7 +10,8 @@ module.exports = {
       "background-gray-color": "#f5f5ff",
       "gray-800": "#18272F",
       "blue-header": "#051441",
-      "activities-blue": "#56607E"
+      "main-gray": "#56607E",
+      "white": "#ffffff"
     },
     fontFamily: {
       'serif': 'europa'

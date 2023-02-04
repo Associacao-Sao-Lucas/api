@@ -21,3 +21,23 @@ body {
     
     ;
 }
+
+.button {
+    @apply rounded-2xl bg-main-color hover:bg-transition-color duration-300 py-2 px-10 text-background-gray-color;
+}
+
+.activities-ul-li {
+    @apply flex items-center justify-center hover:shadow-xl rounded-md  border-2 border-main-color text-center;
+}
+
+.section-flex {
+    @apply flex items-center justify-center flex-col flex-wrap;
+}
+
+.h2-msg {
+    @apply text-transition-color text-3xl;
+}
+
+.p-msg {
+    @apply text-main-gray text-[18px];
+}
