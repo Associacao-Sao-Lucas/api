@@ -5,23 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/assets/styles/styles.css">
+    <link rel="stylesheet" href="../../public/assets/styles/waveHeader.css">
+    <link rel="stylesheet" href="../../public/assets/styles/waveFooter.css">
     <title>São Lucas</title>
 </head>
 <body>
     <header>
-        <nav class="flex items-center justify-between m-8">
+        <nav id="nav" class="flex items-center justify-between m-8 ">
             <div class="container flex items-center h-20 ml-10 mr-10">
                 <a href="/">
                     <img src="../../public/assets/img/logo.svg" alt="Logo" role="img" class="h-16">
                 </a>
     
-                <!-- <button class="#" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-                    <span class="#"></span>
-                </button> -->
+                <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false" class=" md:hidden ">
+                    <span id="hamburger"></span>
+                </button>
                 
                 <div class="basis-full flex-grow self-center ">
-                    <!-- in ul class, mr-auto or not? -->
-                    <ul class="md:flex md:justify-between items-center w-3/4 ml-auto  h-20">
+                    <!-- in ul class, mr-auto? -->
+                    <ul id="menu" role="menu" class="lg:flex lg:justify-between items-center w-3/4 ml-auto  h-20  lg:static lg:z-auto absolute z-[-1]">
                         <li>
                             <a href="/colaboradores" class="header-li-a">Colaboradores</a>
                         </li>
@@ -38,23 +40,35 @@
                         <button class="button">DOAR</button>
                     </ul>
                 </div>
-                
-    
             </div>
-            
         </nav>
-        
     </header>
 
     <main>
-        <section>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nihil, vitae atque perspiciatis, voluptas, obcaecati dignissimos optio animi recusandae facilis ab? Molestiae incidunt magnam, aut id ullam minus reprehenderit alias.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi molestias dolorum tenetur quidem, atque magnam vel quam debitis minus architecto fugiat rem repudiandae tempore temporibus, labore ipsum! Magnam, culpa.
+        <section class=" lg:relative lg:flex justify-between items-center pt-10 bg-background-green-wave shadow-xl">
+
+            <div class="custom-shape-divider-top-1675725518">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div class="relative flex items-center lg:justify-center flex-col xl:flex-wrap lg:pl-12 xl:w-[600px] lg:w-96 text-background-gray-color  ">
+                <h1 class="text-3xl mb-7 hover:font-semibold duration-300">Ser diferente é legal!</h1>
+                <p class="text-xl xl:text-center ">Somos uma associação filantrópica que se dedica à melhoria da qualidade de vida das pessoas com deficiência. Aqui, trabalhamos em parceria com outras organizações e indivíduos para proporcionar apoio, recursos e oportunidades para que essas pessoas possam alcançar seu pleno potencial</p>
+             </div>
+ 
+            <img class="relative hover:scale-110 transition duration-300 ease-in-out rounded z-50 right-0 lg:h-96" src="../../public/assets/img/home-img.png" alt="">
+
+            
+
+            
+
         </section>
 
-        <section>
-            <div class="section-flex bg-white shadow-2xl">
-                <h2 class="h2-msg">Sobre nossa atividades</h2>
+        <section class="shadow-xl">
+            <div class="section-flex">
+                <h2 class="h2-msg mb-7 hover:font-semibold duration-300">Sobre nossa atividades</h2>
                 <p class="p-msg">ABSL atende crianças, jovens, adultos e idosos com deficiência</p>
                 <p class="p-msg">Estamos com três unidades em Bragança Paulista</p>
             </div>
@@ -80,18 +94,33 @@
             </ul>
         </section>
 
-        <section>
-            <div class="section-flex">
-                <h2 class="h2-msg">Dicas de relacionamento especial</h2>
-                <p class="p-msg">Para manter relações saudáveis e respeitosas com pessoas com deficiência, é importante seguir algumas dicas</p>
+        <section class="section-flex w-full">
+            <div class="text-center justify-between h-full">
+                <h2 class="h2-msg mb-7 hover:font-semibold transition duration-300">Dicas de relacionamento especial</h2>
+                <p class="p-msg mb-10">Para manter relações saudáveis e respeitosas com pessoas com deficiência, é importante seguir algumas dicas</p>
                 <button class="button">CLIQUE AQUI</button>
             </div>
         </section>
     </main>
 
-    <footer>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste odio sunt debitis cupiditate alias voluptas esse cum fugiat corrupti aspernatur quaerat, delectus excepturi. Sit ullam, quod quia reprehenderit laudantium aut.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat eius laudantium, deserunt provident, perspiciatis vel a cumque saepe delectus magni tempora voluptas cupiditate fugit nihil eos eligendi eveniet neque totam!
+    <footer class="relative flex justify-between items-center pr-10 pt-10 pb-10 bg-background-green-wave shadow-2xl">
+
+        <div class="custom-shape-divider-top-1675737893">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <iframe class="left-0 relative" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4531.715449139719!2d-46.539787537228335!3d-22.947160319780984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cec98b90000001%3A0x7e2c01ad6a5e3d0!2sAssocia%C3%A7%C3%A3o%20Beneficente%20S%C3%A3o%20Lucas!5e0!3m2!1sen!2sbr!4v1675649062727!5m2!1sen!2sbr" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="relative flex items-center justify-center flex-col flex-wrap text-lg text-background-gray-color">
+            
+           <p class="mb-3">Associação Beneficente São Lucas</p>
+           <p class="mb-3">Rua Madre Cândida de Maria de Jesus, 33</p>
+           <p class="mb-3">Vila Municipal, Bragança Paulista/SP</p>
+           <p class="mb-3">CEP: 12.912-370</p>
+           <p>Tel.: (11) 4033-7934</p>
+        </div>
     </footer>
 
 </body>

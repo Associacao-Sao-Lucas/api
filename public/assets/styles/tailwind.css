@@ -27,11 +27,11 @@ body {
 }
 
 .activities-ul-li {
-    @apply flex items-center justify-center hover:shadow-xl rounded-md  border-2 border-main-color text-center;
+    @apply flex items-center justify-center hover:shadow-xl hover:bg-main-color rounded-md  border-2 border-main-color text-center;
 }
 
 .section-flex {
-    @apply flex items-center justify-center flex-col flex-wrap;
+    @apply flex items-center justify-center flex-col flex-wrap  bg-white shadow-2xl p-12 m-auto;
 }
 
 .h2-msg {
@@ -41,3 +41,9 @@ body {
 .p-msg {
     @apply text-main-gray text-[18px];
 }
+
+
+.wave {
+    @apply relative  left-0 w-full overflow-hidden leading-none;
+}
+
