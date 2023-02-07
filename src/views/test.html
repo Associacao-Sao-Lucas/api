@@ -17,13 +17,14 @@
                     <img src="../../public/assets/img/logo.svg" alt="Logo" role="img" class="h-16">
                 </a>
     
-                <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false" class=" md:hidden ">
+                <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false" class="  ">
                     <span id="hamburger"></span>
                 </button>
                 
                 <div class="basis-full flex-grow self-center ">
                     <!-- in ul class, mr-auto? -->
-                    <ul id="menu" role="menu" class="lg:flex lg:justify-between items-center w-3/4 ml-auto  h-20  lg:static lg:z-auto absolute z-[-1]">
+                    <!-- lg:static lg:z-auto absolute z-[-1] -->
+                    <ul id="menu" role="menu" class="lg:flex lg:justify-between items-center w-3/4 ml-auto  h-20 ">
                         <li>
                             <a href="/colaboradores" class="header-li-a">Colaboradores</a>
                         </li>
@@ -102,6 +103,7 @@
             </div>
         </section>
     </main>
+    
 
     <footer class="relative flex justify-between items-center pr-10 pt-10 pb-10 bg-background-green-wave shadow-2xl">
 
@@ -124,4 +126,6 @@
     </footer>
 
 </body>
+
+<script src="../../public/scripts/menu.js"></script>
 </html>
