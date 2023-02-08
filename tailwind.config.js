@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/views/test.html'],
+  content: ['./src/views/*.html'],
   theme: {
     colors: {
       "header-border-mobile": "#060707",

@@ -31,7 +31,7 @@ body {
 }
 
 .section-flex {
-    @apply flex items-center justify-center flex-col flex-wrap  bg-white shadow-2xl p-12 m-auto;
+    @apply flex items-center justify-center flex-col flex-wrap  pt-36 pl-12 pr-12 m-auto;
 }
 
 .h2-msg {
