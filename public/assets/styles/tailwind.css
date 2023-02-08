@@ -27,7 +27,7 @@ body {
 }
 
 .activities-ul-li {
-    @apply flex items-center justify-center hover:shadow-xl hover:bg-main-color rounded-md  border-2 border-main-color text-center;
+    @apply flex items-center justify-center hover:shadow-xl hover:bg-main-color rounded-full  border-2 border-main-color text-center h-24 p-4;
 }
 
 .section-flex {
@@ -46,4 +46,3 @@ body {
 .wave {
     @apply relative  left-0 w-full overflow-hidden leading-none;
 }
-
