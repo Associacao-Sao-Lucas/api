@@ -10,7 +10,8 @@ body {
 
 .header-li-a {
     @apply 
-    
+    flex
+
     relative font-medium text-blue-header 
    
     hover:text-transition-color hover:duration-300
@@ -27,7 +28,7 @@ body {
 }
 
 .activities-ul-li {
-    @apply flex items-center justify-center hover:shadow-xl hover:bg-main-color rounded-full  border-2 border-main-color text-center h-24 p-4;
+    @apply flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl sm:hover:bg-main-color rounded-full  sm:border-2 border-main-color text-center h-24 p-4;
 }
 
 .section-flex {

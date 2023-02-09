@@ -16,5 +16,14 @@
 
 .custom-shape-divider-top-1675725518 .shape-fill {
     fill: #F5F5FF;
+    
 }
 
+
+@media (max-width: 1024px) {
+    .custom-shape-divider-top-1675725518 {
+        /* display: none; */
+    }
+
+    
+}

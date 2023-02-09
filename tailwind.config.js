@@ -13,7 +13,8 @@ module.exports = {
       "blue-header": "#051441",
       "main-gray": "#56607E",
       "white": "#ffffff",
-      "white-text": "#f6f6f6"
+      "white-text": "#f6f6f6",
+      "grey-text": "#777777"
     },
     fontFamily: {
       'serif': 'europa'
