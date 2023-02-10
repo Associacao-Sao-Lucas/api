@@ -1,0 +1,9 @@
+#team-member{
+	transition: 0.3s;
+	box-shadow:  4px 4px 4px #A9A9A9;
+  
+}
+
+#team-member:hover {
+    box-shadow: 4px 7px 7px 4px #F5F5FF; 
+}

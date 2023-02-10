@@ -28,7 +28,12 @@ body {
 }
 
 .activities-ul-li {
-    @apply flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl sm:hover:bg-main-color rounded-full  sm:border-2 border-main-color text-center h-24 p-4;
+    @apply flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl sm:hover:bg-main-color rounded-full  sm:border-2 border-main-color text-center text-blue-header h-24 p-4;
+}
+
+.staff-ul-li {
+    @apply flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl  rounded-full  sm:border-2 border-main-color text-center text-blue-header h-24 p-4 flex-col;
+
 }
 
 .section-flex {
