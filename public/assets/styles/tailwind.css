@@ -36,6 +36,10 @@ body {
 
 }
 
+.partner-img {
+    @apply flex items-center justify-center flex-col xl:hover:scale-110 transition duration-300 ease-in-out xl:rounded  xl:border-grey-text; 
+}
+
 .section-flex {
     @apply flex items-center justify-center flex-col flex-wrap  pt-36 pl-12 pr-12 m-auto;
 }
@@ -52,3 +56,4 @@ body {
 .wave {
     @apply relative  left-0 w-full overflow-hidden leading-none;
 }
+
