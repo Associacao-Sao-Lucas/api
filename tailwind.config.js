@@ -17,7 +17,8 @@ module.exports = {
       "grey-text": "#777777",
       "partner-img-bg": "#eeeeee",
       "grey": "#808080",
-      "light-grey": "#d3d3d3"
+      "light-grey": "#d3d3d3",
+      "grey-menu-collapsible":"#eeeeee"
     },
     fontFamily: {
       'serif': 'europa'

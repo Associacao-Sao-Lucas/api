@@ -32,7 +32,7 @@ body {
 }
 
 .staff-ul-li {
-    @apply flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl  rounded-full  sm:border-2 border-main-color text-center text-blue-header h-24 p-4 flex-col;
+    @apply flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl  rounded-full  sm:border-2 border-main-color text-center text-blue-header h-24 p-4 flex-col hover:scale-110 transition duration-300 ease-in-out;
 
 }
 
@@ -57,3 +57,19 @@ body {
     @apply relative  left-0 w-full overflow-hidden leading-none;
 }
 
+.collapsible {
+    @apply  cursor-pointer p-[18px] w-full sm:w-80  text-center text-main-color  sm:text-start text-xs h-20;
+}
+
+
+.content {
+    @apply   p-[16px] px-[18px] hidden  overflow-hidden   justify-between text-center;
+}
+
+.transparency-li {
+    @apply tracking-wide py-3;
+}
+
+.img-gallery {
+    @apply  hover:scale-110 sm:hover:scale-125 transition duration-150 ease-in-out rounded  sm:h-[310px];
+}
