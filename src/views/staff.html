@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="../../public/assets/styles/secondWave.css">
     <link rel="stylesheet" href="../../public/assets/styles/waveFooter.css">
     <link rel="stylesheet" href="../../public/assets/styles/headerMobile.css">
-    <link rel="stylesheet" href="../../public/assets/styles/staffBorder.css">
+    <!-- <link rel="stylesheet" href="../../public/assets/styles/staffBorder.css"> -->
     <title>São Lucas</title>
 </head>
 <body >
     <header>
         <nav id="nav" class=" flex items-center justify-around lg:justify-between mt-8 mb-8 mx-12">
 
-            <a href="/">
+            <a href="./home.html">
                 <img src="../../public/assets/img/logo.svg" alt="Logo" role="img" class="md:h-16">
             </a>
 
@@ -26,16 +26,16 @@
             
             <ul id="menu" role="menu" class="flex  lg:justify-between items-center w-3/4 ml-auto  h-20 ">
                 <li class="link-header">
-                    <a href="/colaboradores" class="header-li-a">Colaboradores</a>
+                    <a href="./staff.html" class="header-li-a">Colaboradores</a>
                 </li>
                 <li class="link-header">
-                    <a href="/galeria" class="header-li-a">Galeria</a>
+                    <a href="./gallery.html" class="header-li-a">Galeria</a>
                 </li>
                 <li class="link-header">
-                    <a href="/transparencia" class="header-li-a">Transparência</a>
+                    <a href="./transparency.html" class="header-li-a">Transparência</a>
                 </li>
                 <li class="link-header">
-                    <a href="/parceiros" class="header-li-a">Parceiros</a>
+                    <a href="./partners.html" class="header-li-a">Parceiros</a>
                 </li>
 
                 <button class="button">DOAR</button>
@@ -48,7 +48,7 @@
     
                 <!-- apresentação -->
                 <div class="flex items-center justify-center flex-col flex-wrap p-8">
-                    <h1 class="h2-msg  hover:font-semibold duration-300">Sobre nossos colaboradores</h1>
+                    <h1 class="subtitle">Sobre nossos colaboradores</h1>
                     <!-- <p class="p-msg">ABSL atende crianças, jovens, adultos e idosos com deficiência</p> -->
                 </div>
 
@@ -56,114 +56,116 @@
 
                 <section class="w-full">
                     <div class="flex items-center justify-center flex-col flex-wrap p-8">
-                        <h2 class="text-transition-color text-2xl  hover:font-semibold duration-300">Unidade I (sede)</h2>
+                        <h2 class="text-transition-color text-2xl  font-semibold">Unidade I (sede)</h2>
                         <p class="p-msg">Em nossa sede, atendemos aproximadamente 275 pessoas</p>
                     </div>
 
+                    <!-- flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl sm:hover:bg-main-color rounded-full  sm:border-2 border-main-color text-center text-blue-header h-24 p-4 -->
+
                     <ul class="w-auto  rounded mx-auto grid gap-10  sm:grid-cols-2  p-8 xl:w-full xl:p-12  sm:w-8/12 lg:grid-cols-3 xl:grid-cols-4">
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Eduarda Cristina Mariano</h3>
-                            <h4 class="text-main-color">Psicóloga</h4>
+                            <h4 class="text-main-gray">Psicóloga</h4>
                         </li>   
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Camila de Oliveira Arantes</h3>
-                            <h4 class="text-main-color">Coordenadora Pedagógica</h4>
+                            <h4 class="text-main-gray">Coordenadora Pedagógica</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Djany Aparecida Lucena</h3>
-                            <h4 class="text-main-color">Psicóloga</h4>
+                            <h4 class="text-main-gray">Psicóloga</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Donizete Ferreira Dops Santos</h3>
-                            <h4 class="text-main-color">Prof. Informática adaptada</h4>
+                            <h4 class="text-main-gray">Prof. Informática adaptada</h4>
                         </li>
                         
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Elaine Cristina Strato Tocchio</h3>
-                            <h4 class="text-main-color">Arteterapeuta</h4>
+                            <h4 class="text-main-gray">Arteterapeuta</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Marisa Aparecida Ferreira da Silva</h3>
-                            <h4 class="text-main-color">Psicopedagoga</h4>
+                            <h4 class="text-main-gray">Psicopedagoga</h4>
                         </li>
                         
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Marli Aparecida Pazeto da Silva</h3>
-                            <h4 class="text-main-color">Pedagoga</h4>
+                            <h4 class="text-main-gray">Pedagoga</h4>
                         </li>
                         
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Priscila Tassara Streapco</h3>
-                            <h4 class="text-main-color">Musicoterapeuta</h4>
+                            <h4 class="text-main-gray">Musicoterapeuta</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Silvia Regina Da Silva Lopes</h3>
-                            <h4 class="text-main-color">Psicopedagoga</h4>
+                            <h4 class="text-main-gray">Psicopedagoga</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Simone Maria Ramos</h3>
-                            <h4 class="text-main-color">Pedagoga/Instrutora braille</h4>
+                            <h4 class="text-main-gray">Pedagoga/Instrutora braille</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Mario Johannes H. Palmen</h3>
-                            <h4 class="text-main-color">Educador Físico</h4>
+                            <h4 class="text-main-gray">Educador Físico</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Luana M. Zilocchi</h3>
-                            <h4 class="text-main-color">Fonoaudióloga</h4>
+                            <h4 class="text-main-gray">Fonoaudióloga</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Célia Payão</h3>
-                            <h4 class="text-main-color">Musicoterapeuta</h4>
+                            <h4 class="text-main-gray">Musicoterapeuta</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Elmandy Daielle André Santos</h3>
-                            <h4 class="text-main-color">Pedagoga</h4>
+                            <h4 class="text-main-gray">Pedagoga</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Joyce Isabel Belchiol</h3>
-                            <h4 class="text-main-color">Arteterapeuta</h4>
+                            <h4 class="text-main-gray">Arteterapeuta</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Maria Silvia Bereta</h3>
-                            <h4 class="text-main-color">Fisioterapeuta</h4>
+                            <h4 class="text-main-gray">Fisioterapeuta</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Melanie Dias Silveira</h3>
-                            <h4 class="text-main-color">Coord. Telemarketing</h4>
+                            <h4 class="text-main-gray">Coord. Telemarketing</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Jonas Eduardo de Lima</h3>
-                            <h4 class="text-main-color">Motorista</h4>
+                            <h4 class="text-main-gray">Motorista</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Rosali Melli</h3>
-                            <h4 class="text-main-color">Aux. de Serviços Gerais</h4>
+                            <h4 class="text-main-gray">Aux. de Serviços Gerais</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Fabiane de Medeiros Pinheiro</h3>
-                            <h4 class="text-main-color">Aux. Administrativo</h4>
+                            <h4 class="text-main-gray">Aux. Administrativo</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Elisabete de Oliveira</h3>
-                            <h4 class="text-main-color">Assistente de RH</h4>
+                            <h4 class="text-main-gray">Assistente de RH</h4>
                         </li>
                     </ul>
 
@@ -171,48 +173,48 @@
 
                 <section class="w-full">
                     <div class="flex items-center justify-center flex-col flex-wrap p-8">
-                        <h2 class="text-transition-color text-2xl  hover:font-semibold duration-300">Unidade II (Equoterapia)</h2>
+                        <h2 class="text-transition-color text-2xl  font-semibold">Unidade II (Equoterapia)</h2>
                         <p class="p-msg">Em nossa sede, atendemos aproximadamente 70 pessoas</p>
                     </div>
                     <ul class="w-auto rounded mx-auto grid gap-10  sm:grid-cols-2  p-8  sm:w-8/12 lg:grid-cols-3 xl:grid-cols-4 xl:w-full xl:p-12">
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header" >Camila Damasio de Campos</h3>
-                            <h4 class="text-main-color">Psicóloga</h4>
+                            <h4 class="text-main-gray">Psicóloga</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header" >Sabrina Ramos Pires</h3>
-                            <h4 class="text-main-color">Fisioterapeuta</h4>
+                            <h4 class="text-main-gray">Fisioterapeuta</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header" >Milena Suguiyama Bacci</h3>
-                            <h4 class="text-main-color">Fisioterapeuta</h4>
+                            <h4 class="text-main-gray">Fisioterapeuta</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header" >Stephane Barbosa Leme</h3>
-                            <h4 class="text-main-color">Pedagoga</h4>
+                            <h4 class="text-main-gray">Pedagoga</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header" >Lucas Lima</h3>
-                            <h4 class="text-main-color">Fisioterapeuta</h4>
+                            <h4 class="text-main-gray">Fisioterapeuta</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header" >Lucas Rafael Zandoná</h3>
-                            <h4 class="text-main-color">Equitador</h4>
+                            <h4 class="text-main-gray">Equitador</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header" >Flora Sampaio</h3>
-                            <h4 class="text-main-color">Psicóloga</h4>
+                            <h4 class="text-main-gray">Psicóloga</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header" >Ariana Karen da Silva</h3>
-                            <h4 class="text-main-color">Fisioterapeuta</h4>
+                            <h4 class="text-main-gray">Fisioterapeuta</h4>
                         </li>
                     </ul>
 
@@ -220,63 +222,63 @@
 
                 <section class="w-full">
                     <div class="flex items-center justify-center flex-col flex-wrap p-8">
-                        <h2 class="text-transition-color text-2xl  hover:font-semibold duration-300">Unidade III (Residência Terapêutica Nível II)</h2>
+                        <h2 class="text-transition-color text-2xl  font-semibold">Unidade III (Residência Terapêutica Nível II)</h2>
                         <p class="p-msg">Abriga até 10 moradores.</p>
                     </div>
                     <ul class="w-auto rounded mx-auto grid gap-10  sm:grid-cols-2  p-8  sm:w-8/12 lg:grid-cols-3 xl:grid-cols-4 xl:w-full xl:p-12">
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Tamara Noguira Vasconcelos</h3>
-                            <h4 class="text-main-color">Enfermeira</h4>
+                            <h4 class="text-main-gray">Enfermeira</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Bruna Dias Silveira da Silva</h3>
-                            <h4 class="text-main-color">Cuidadora</h4>
+                            <h4 class="text-main-gray">Cuidadora</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Carina Bueno Mauro</h3>
-                            <h4 class="text-main-color">Técnica de Enfermagem</h4>
+                            <h4 class="text-main-gray">Técnica de Enfermagem</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Eliete Pereira dos Santos</h3>
-                            <h4 class="text-main-color">Cuidadora</h4>
+                            <h4 class="text-main-gray">Cuidadora</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Juliana Meira do Carmo</h3>
-                            <h4 class="text-main-color">Cuidadora</h4>
+                            <h4 class="text-main-gray">Cuidadora</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Rosangela de Jesus Veiga</h3>
-                            <h4 class="text-main-color">Cuidadora</h4>
+                            <h4 class="text-main-gray">Cuidadora</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Maria Eluciana Dias Silveira</h3>
-                            <h4 class="text-main-color">Cozinheira</h4>
+                            <h4 class="text-main-gray">Cozinheira</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Donizeti Silveira</h3>
-                            <h4 class="text-main-color">Cuidador</h4>
+                            <h4 class="text-main-gray">Cuidador</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Neuza Aparecida Domingues Pereira</h3>
-                            <h4 class="text-main-color">Tecnica de Enfermagem</h4>
+                            <h4 class="text-main-gray">Tecnica de Enfermagem</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Olga de Lima Giomo</h3>
-                            <h4 class="text-main-color">Cuidadora</h4>
+                            <h4 class="text-main-gray">Cuidadora</h4>
                         </li>
 
-                        <li id="team-member" class="staff-ul-li">
+                        <li class="staff-ul-li">
                             <h3 class="text-blue-header">Lindalva Martiningo Fagundes</h3>
-                            <h4 class="text-main-color">Cuidadora</h4>
+                            <h4 class="text-main-gray">Cuidadora</h4>
                         </li>
                     </ul>
                 </section>
@@ -286,10 +288,9 @@
             </section>
     </main>
     
-
+    <script src="../../public/scripts/menu.js"></script>
     
-
 </body>
 
-<script src="../../public/scripts/menu.js"></script>
+
 </html>

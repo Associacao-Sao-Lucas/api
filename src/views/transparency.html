@@ -14,7 +14,7 @@
     <header>
         <nav id="nav" class=" flex items-center justify-around lg:justify-between mt-8 mb-8 mx-12">
 
-            <a href="/">
+            <a href="./home.html">
                 <img src="../../public/assets/img/logo.svg" alt="Logo" role="img" class="md:h-16">
             </a>
 
@@ -24,16 +24,16 @@
             
             <ul id="menu" role="menu" class="flex  lg:justify-between items-center w-3/4 ml-auto  h-20 ">
                 <li class="link-header">
-                    <a href="/colaboradores" class="header-li-a">Colaboradores</a>
+                    <a href="./staff.html" class="header-li-a">Colaboradores</a>
                 </li>
                 <li class="link-header">
-                    <a href="/galeria" class="header-li-a">Galeria</a>
+                    <a href="./gallery.html" class="header-li-a">Galeria</a>
                 </li>
                 <li class="link-header">
-                    <a href="/transparencia" class="header-li-a">Transparência</a>
+                    <a href="./transparency.html" class="header-li-a">Transparência</a>
                 </li>
                 <li class="link-header">
-                    <a href="/parceiros" class="header-li-a">Parceiros</a>
+                    <a href="./partners.html" class="header-li-a">Parceiros</a>
                 </li>
 
                 <button class="button">DOAR</button>
@@ -42,65 +42,99 @@
     </header>
     
     <main>
-        <section>
+        <section class="relative flex flex-col items-center text-center py-12">
 
-            <ul class="flex items-center justify-center flex-col pt-12 sm:items-start  h-auto">
-                <button  class="collapsible bg-light-grey">Operacional</button>
-                <div class="content flex-col">
-                    <li class="transparency-li"><a class="text-blue-header" href="">Prestadores de Serviço</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Declaraçao de Diretoria Não Remunerada</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Relação Nominal dos Dirigentes</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Relação de Colaboradores</a></li>
+            <!-- PARA EVITAR ESSE PROBLEMA, USAR AS 4 DIVS DE SECREATARIA EM COLUNAS, E FAZER O GRID NA VERTICAL -->
+
+            <div>
+                <h1 class="transparency-subtitle">Transparência</h1>
+                <!-- <p></p> -->
+            </div>
+
+            <!-- operacional -->
+            <section class="pt-10">
+                <h2 class="text-transition-color text-3xl  font-semibold">Operacional</h2>
+                <ul class="w-auto mx-auto grid sm:gap-10 rounded py-12 sm:grid-cols-2 sm:w-8/12 lg:grid-cols-4 justify-center">
+                    <li class="transparency-ul-li"><a href="">Prestadores de Serviço</a></li>
+                    <li class="transparency-ul-li"><a href="">Declaraçao de Diretoria Não Remunerada</a></li>
+                    <li class="transparency-ul-li"><a href="">Relação Nominal dos Dirigentes</a></li>
+                    <li class="transparency-ul-li"><a href="">Relação de Colaboradores</a></li>
+                </ul>
+            </section>
+            
+            <!-- Secretaria -->
+            <section>
+                <h2 class="text-transition-color text-3xl  font-semibold">Secretaria</h2>
+
+                <div class="grid md:grid-col-2 md:justify-center">
+                    <div class="pt-8 justify-center">
+                        <h3 class="text-transition-color text-2xl">Regulamentos</h3>
+                        <ul class="w-auto mx-auto grid gap-10 rounded py-12 sm:grid-cols-2 sm:w-8/12  lg:grid-cols-4 ">
+                            <li class="transparency-ul-li"><a href="">Regulamento de Contração sssssssssss</a></li>
+                            <li class="transparency-ul-li"><a href="">Regulamento de Compras</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- <ul class="w-auto mx-auto flex flex-wrap justify-between rounded py-12">
+                        <li class="transparency-ul-li"><a href="">Termo de Colaboração - Residência Terapêutica</a></li>
+                        <li class="transparency-ul-li"><a href="">Termo de Colaboração - São Lucas</a></li>
+                        <li class="transparency-ul-li"><a href="">Termo de Colaboração - Equoterapia</a></li>
+                    </ul> -->
+                      
+                    
+                    <div class="pt-8 ">
+                        <h3 class="text-transition-color text-2xl">Termos de Colaboração</h3>
+                        <ul class="w-auto mx-auto grid gap-10 rounded py-12 sm:grid-cols-2 sm:w-8/12 lg:grid-cols-4 justify-center">
+                            <li class="transparency-ul-li"><a href="">Termo de Colaboração - Residência Terapêutica</a></li>
+                            <li class="transparency-ul-li"><a href="">Termo de Colaboração - São Lucas</a></li>
+                            <li class="transparency-ul-li"><a href="">Termo de Colaboração - Equoterapia</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="pt-8">
+                        <h3 class="text-transition-color text-2xl">Planos de Ação</h3>
+                        <ul class=" mx-auto grid gap-10 rounded py-12 sm:grid-cols-2 w-8/12 lg:grid-cols-4 justify-center">
+                            <li class="transparency-ul-li"><a href="">Plano de Ação - Residência Terapêutica</a></li>
+                            <li class="transparency-ul-li"><a href="">Plano de Ação - São Lucas</a></li>
+                            <li class="transparency-ul-li"><a href="">Plano de Ação - Equinoterapia</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="pt-8">
+                        <h3 class="text-transition-color text-2xl">Documentos Cadastrais</h3>
+                        <ul class="w-auto mx-auto grid gap-10 rounded py-12 sm:grid-cols-2 sm:w-8/12 lg:grid-cols-4 justify-center">
+                            <li class="transparency-ul-li"><a href="">Ata da Assembleia Geral</a></li>
+                            <li class="transparency-ul-li"><a href="">Estatuto Social</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <button class="collapsible bg-light-grey">Secretaria</button>
-                <div class="content flex-col">
-                    <button id="btn-rules" class="collapsible ">Regulamentos</button>
-                    <div class="content ">
-                        <li class="transparency-li"><a class="text-blue-header" href="">Regulamento de Contração</a></li>
-                        <li class="transparency-li"><a class="text-blue-header" href="">Regulamento de Compras</a></li>
-                    </div>
-
-                    <button id="btn-terms" class="collapsible ">Termos de Colaboração</button>
-                    <div class="content">
-                        <li class="transparency-li"><a class="text-blue-header" href="">Termo de Colaboração - Residência Terapêutica</a></li>
-                        <li class="transparency-li"><a class="text-blue-header" href="">Termo de Colaboração - São Lucas</a></li>
-                        <li class="transparency-li"><a class="text-blue-header" href="">Termo de Colaboração - Equoterapia</a></li>
-                    </div>
-                    
-                    <button id="btn-actions" class="collapsible">Planos de Ação</button>
-                    <div class="content flex-col ">
-                        <li class="transparency-li"><a class="text-blue-header" href="">Plano de Ação - Residência Terapêutica</a></li>
-                        <li class="transparency-li"><a class="text-blue-header" href="">Plano de Ação - São Lucas</a></li>
-                        <li class="transparency-li"><a class="text-blue-header" href="">Plano de Ação - Equinoterapia</a></li>
-                    </div>
-
-                    <li class="transparency-li"><a class="text-blue-header" href="">Ata da Assembleia Geral</a></li>
-
-                    <li class="transparency-li"><a class="text-blue-header" href="">Estatuto Social</a></li>
-                    
-                </div>
                 
-                <button  class="collapsible bg-light-grey">Prestação de Contas</button>
-                <div class="content flex-col">
-                    <li class="transparency-li"><a class="text-blue-header" href="">Relação de Gastos - 06/2021</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Relatório Físico Financeiro</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Demonstração do Resultado - 2020</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Anexo 17</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Demonstração das Mutações do Patrimônio Líquido</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Fluxo de Caixa</a></li>
-                    <li class="transparency-li"><a class="text-blue-header" href="">Balanço Patrimonial</a></li>
-                </div>
 
-            </ul>
+            </section>
+
+            <section>
+                <h2 class="text-transition-color text-3xl  font-semibold">Prestação de Contas</h2>
+                <ul class="w-auto mx-auto grid gap-10 rounded py-12 sm:grid-cols-2 sm:w-8/12 lg:grid-cols-4 justify-center">
+                    <li class="transparency-ul-li"><a href="">Relação de Gastos - 06/2021</a></li>
+                    <li class="transparency-ul-li"><a href="">Relatório Físico Financeiro</a></li>
+                    <li class="transparency-ul-li"><a href="">Demonstração do Resultado - 2020</a></li>
+                    <li class="transparency-ul-li"><a href="">Anexo 17</a></li>
+                    <li class="transparency-ul-li"><a href="">Demonstração das Mutações do Patrimônio Líquido
+                    </a></li>
+                    <li class="transparency-ul-li"><a href="">Fluxo de Caixa
+                    </a></li>
+                    <li class="transparency-ul-li"><a href="">Balanço Patrimonial
+                    </a></li>
+                </ul>
+            </section>
+            
         </section>
+
     </main>
     
-
-    
+    <script src="../../public/scripts/menu.js"></script>
 
 </body>
 
-<script src="../../public/scripts/menu.js"></script>
-<script src="../../public/scripts/collapsible.js"></script>
 </html>

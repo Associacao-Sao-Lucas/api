@@ -15,7 +15,7 @@ module.exports = {
       "white": "#ffffff",
       "white-text": "#f6f6f6",
       "grey-text": "#777777",
-      "partner-img-bg": "#eeeeee",
+      "partner-li-bg": "#eeeeee",
       "grey": "#808080",
       "light-grey": "#d3d3d3",
       "grey-menu-collapsible":"#eeeeee"

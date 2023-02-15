@@ -27,26 +27,34 @@ body {
     @apply rounded-2xl bg-main-color hover:bg-transition-color duration-300 py-2 px-10 text-background-gray-color;
 }
 
-.activities-ul-li {
-    @apply flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl sm:hover:bg-main-color rounded-full  sm:border-2 border-main-color text-center text-blue-header h-24 p-4;
+.grid-li {
+    @apply flex items-center justify-center rounded-full border-main-color text-center text-blue-header h-24 p-4  sm:hover:shadow-xl sm:hover:bg-main-color sm:border-2;
 }
 
 .staff-ul-li {
-    @apply flex items-center justify-center hover:shadow-2xl sm:hover:shadow-xl  rounded-full  sm:border-2 border-main-color text-center text-blue-header h-24 p-4 flex-col hover:scale-110 transition duration-300 ease-in-out;
+    @apply flex items-center justify-center rounded-full border-main-color text-center text-blue-header h-24 p-4 flex-col sm:hover:shadow-xl sm:hover:bg-main-color sm:border-2;
 
 }
 
-.partner-img {
-    @apply flex items-center justify-center flex-col xl:hover:scale-110 transition duration-300 ease-in-out xl:rounded  xl:border-grey-text; 
+.transparency-ul-li {
+    @apply flex items-center justify-center rounded-full border-main-color text-center text-blue-header h-20 p-4 flex-col sm:hover:shadow-xl sm:hover:bg-main-color sm:border-2
 }
 
 .section-flex {
     @apply flex items-center justify-center flex-col flex-wrap  pt-36 pl-12 pr-12 m-auto;
+
 }
 
-.h2-msg {
-    @apply text-transition-color text-3xl;
+.subtitle {
+    @apply text-transition-color text-3xl font-semibold;
+    
 }
+
+.transparency-subtitle {
+    @apply text-transition-color text-4xl font-semibold;
+    
+}
+
 
 .p-msg {
     @apply text-main-gray text-[18px];
@@ -72,4 +80,13 @@ body {
 
 .img-gallery {
     @apply  hover:scale-110 sm:hover:scale-125 transition duration-150 ease-in-out rounded  sm:h-[310px];
+}
+
+.img-partners {
+    @apply bg-gradient-to-t from-background-green-wave to-background-gray-color;
+}
+
+.partner-li {
+    @apply flex items-center justify-center flex-col  xl:rounded  xl:border-grey-text;
+
 }
