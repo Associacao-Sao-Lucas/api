@@ -14,12 +14,11 @@
 		align-items: center;
 		justify-items: center;
 		position: absolute;
-		width: 90%;
+		width: 50%;
 		top: 110px;
-		left: 5%;
-		right: 5%;
-		background: #EEEEEE;
+		
 		transition: 0.6s;
+		background: #C0C0C0;
 		z-index: 1000;
 		height: 0px;
 		visibility: hidden;
@@ -28,12 +27,12 @@
 	}
 
 	header .link-header {
-		background-color: #EEEEEE;
+		background-color: #C0C0C0;
 	}
 	
 
 	header #nav.active #menu {
-		height: 80vh;
+		height: 40vh;
 		visibility: visible;
 		overflow-y: hidden;
 	}

@@ -37,7 +37,7 @@ body {
 }
 
 .transparency-ul-li {
-    @apply flex items-center justify-center rounded-full border-main-color text-center text-blue-header h-20 p-4 flex-col sm:hover:shadow-xl sm:hover:bg-main-color sm:border-2
+    @apply flex items-center justify-center rounded-full border-main-color text-center text-blue-header h-20 p-4 flex-col  sm:hover:shadow-xl sm:hover:bg-main-color sm:border-2
 }
 
 .section-flex {
