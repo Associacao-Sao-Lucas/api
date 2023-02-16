@@ -1,5 +1,5 @@
 @media (max-width: 1024px) {
-	header #btn-mobile {
+	#btn-mobile {
 		padding: 0.5rem 1rem;
 		font-size: 1rem;
 		border: none;
@@ -9,7 +9,7 @@
 
 	}
 
-	header #menu {
+	#menu {
 		flex-direction: column;
 		align-items: center;
 		justify-items: center;
@@ -26,31 +26,31 @@
 
 	}
 
-	header .link-header {
+	.link-header {
 		background-color: #C0C0C0;
 	}
 	
 
-	header #nav.active #menu {
+	#nav.active #menu {
 		height: 380px;
 		visibility: visible;
 		overflow-y: hidden;
 	}
 
-	header #menu a {
+	#menu a {
 		padding: 0.5rem 0;
 		margin: 1rem 1rem;
 		border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 		justify-content: space-around;
 	}
 
-	header #hamburger {
+	#hamburger {
 		border-top: 2px solid;
    		width: 20px;
 		color: #00a859;
 	}
 
-	header #hamburger::after, #hamburger::before {
+	#hamburger::after, #hamburger::before {
 		content: '';
 		display: block;
 		width: 20px;
@@ -61,15 +61,15 @@
 		position: relative;
 	}
 
-	header #nav.active #hamburger {
+	#nav.active #hamburger {
 		border-top-color: transparent;
 	}
 
-	header #nav.active #hamburger::before {
+	#nav.active #hamburger::before {
 		transform: rotate(135deg);
 	}
 
-	header #nav.active #hamburger::after {
+	#nav.active #hamburger::after {
 		transform: rotate(-135deg);
 		top: -7px;
 	}
